@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulhamid</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+           <form action="search" method="GET">
+               <input type="search" placeholder="so'zni kiriting" name="searched">
+               <button type="submit">qidirish</button>
+           </form>
+        </div>
+        <div class="wrapp">
+            <div class="left" id="left">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h1>{{ t_soz }} &#10004</h1>
+
+            </div>
+            <div class="right" id="right">
+                     <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                {% for i in n_soz %}
+                <br/>
+                <h1>{{ i.wrong_one }} &#10006</h1>
+                <br/>
+                {% endfor %}
+                    <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
